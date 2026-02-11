@@ -7,7 +7,7 @@ import React from "react";
 const ResetButton = ({ onClick }) => {
   return (
     <button id="reset" onClick={onClick} tabIndex="-1">
-      <img src="/reset.png" alt="reset button" />
+      <img src={`${process.env.PUBLIC_URL}/reset.png`} alt="reset button" />
     </button>
   );
 };
