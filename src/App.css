@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/*GENERAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg-primary: #011c26;
+  --color-bg-panel: #043540;
+  --color-accent-primary: #bf5e70;
+  --button-letter-bg: #d9a3a3;
+  --color-text-primary: white;
+  --color-text-secondary: #aaa;
+  --color-border-accent: #bf5e70;
+  --scrollbar-thumb: #bf5e70;
+  --scrollbar-track: #043540;
+  --definitions-bg-panel: #d9d4d0;
+  --button-game-bg: #bf5e70;
+  --color-error: red;
+  --color-text-tertiary: #d9d4d0;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  text-align: center;
+  color: var(--color-text-primary);
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+}
+
+.App-main {
+  display: flex;
+  align-items: flex-start;
+  height: 87vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*HEADER*/
+header {
+  height: 13vh;
+  align-content: center;
+}
+
+.controls-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-right: 10%;
+}
+
+/*GAMEMODE */
+.gameMode {
+  width: 100%;
+  height: 70%;
+  color: var(--color-text-secondary);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.choose-letters {
+  /* margin: 0 auto; */
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.3vw;
+  width: 100%;
+}
+
+.choose-letters input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px var(--button-game-bg) solid;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 0.5em;
+  color: var(--color-text-secondary);
+  margin: 0.5em auto 0 auto;
+  font-size: 1.3vw;
+}
+
+.choose-letters input:focus {
+  outline: none;
+}
+
+.choose-letters .letters-container {
+  min-height: 4.5vh;
+  margin-top: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+  margin: 1vh auto 0 auto;
+}
+
+.choose-letters .letters-container button {
+  padding: 1.3vw;
+  cursor: default;
+}
+/*GAME*/
+.game {
+  width: 50%;
+  height: 100%;
+}
+
+.game button {
+  border: none;
+  border-radius: 5px;
+  margin: 1%;
+  padding: 1% 2%;
+  background-color: var(--button-game-bg);
+}
+
+/*input text*/
+.input-container {
+  margin-top: 25%;
+}
+
+.input-container input {
+  background-color: transparent;
+  border: none;
+  width: 60%;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+/*Letters*/
+.letters-container button {
+  background-color: var(--button-letter-bg);
+  padding: 2%;
+  border: none;
+  margin: 2% 0.5%;
+  border-radius: 5px;
+}
+
+.letters-container {
+  display: contents;
+  margin-top: 0.5em;
+}
+
+/*words list*/
+.words {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.game .word-button {
+  background-color: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+}
+
+.game .word-button-focus {
+  border-bottom: 1px var(--color-border-accent) solid;
+  background-color: transparent;
+  border-radius: 0;
+  font-weight: 700;
+  color: var(--color-text-tertiary);
+}
+
+#wordsList {
+  width: 60%;
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  flex-wrap: wrap;
+  color: var(--color-text-secondary);
+  justify-content: center;
+}
+
+#wordsList li {
+  padding: 2%;
+}
+
+#reset {
+  background-color: var(--color-text-tertiary);
+  border-radius: 50%;
+  padding: 0.6%;
+  width: 5%;
+  margin-right: 5%;
+  display: flex;
+  align-items: center;
+}
+
+#reset img {
+  width: 100%;
+}
+
+.input-container .shakeError {
+  color: var(--color-error);
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(2.5%);
+  }
+  40%,
+  80% {
+    transform: translateX(-2.5%);
+  }
+}
+
+/*DEFINITIONS*/
+#definitions ul li {
+  list-style: none;
+}
+
+ul#wordMeanings li {
+  list-style-type: "- ";
+}
+
+#definitions {
+  background-color: var(--definitions-bg-panel);
+  padding: 3em;
+  max-height: 80vh;
+  border-radius: 25px;
+  color: var(--color-bg-panel);
+  text-align: left;
+  display: none;
+  overflow-y: auto;
+  text-align: left;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+  transform: translateY(-40%);
+  top: 45%;
+  position: absolute;
+  width: 40%;
+}
+
+#meanings {
+  height: auto;
+  width: 40%;
+}
+
+.part-of-speech {
+  color: #bf5e70;
+  font-weight: bold;
+  list-style: none;
+}
+
+.gameMode-buttons button {
+  border: none;
+  border-radius: 5px;
+  margin: 1%;
+  padding: 1% 2%;
+  background-color: var(--button-game-bg);
+  font-size: 0.9em;
+}
