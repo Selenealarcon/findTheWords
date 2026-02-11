@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Selenealarcon/findTheWords.git/static/css/main.918aa9cc.css",
+    "main.js": "/Selenealarcon/findTheWords.git/static/js/main.351ab753.js",
+    "static/js/453.699dc412.chunk.js": "/Selenealarcon/findTheWords.git/static/js/453.699dc412.chunk.js",
+    "index.html": "/Selenealarcon/findTheWords.git/index.html",
+    "main.918aa9cc.css.map": "/Selenealarcon/findTheWords.git/static/css/main.918aa9cc.css.map",
+    "main.351ab753.js.map": "/Selenealarcon/findTheWords.git/static/js/main.351ab753.js.map",
+    "453.699dc412.chunk.js.map": "/Selenealarcon/findTheWords.git/static/js/453.699dc412.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.918aa9cc.css",
+    "static/js/main.351ab753.js"
+  ]
+}
