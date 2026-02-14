@@ -616,6 +616,31 @@ function App() {
           </>
         )}
       </main>
+      <footer>
+        <p>&copy;2026 Selene Alarcón - Desarrolladora Web</p>
+        <ul>
+          <li>
+            <a href="https://github.com/Selenealarcon">
+              <img
+                src={`${process.env.PUBLIC_URL}//github.svg`}
+                alt="Perfil de Github de Selene Alarcón"
+                title="Perfil en Github"
+                class="svg-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/selene-alarcon/">
+              <img
+                src={`${process.env.PUBLIC_URL}/linkedin.svg`}
+                alt="Perfil de LinkedIn de Selene Alarcón"
+                title="Perfil en Linkedin"
+                class="svg-icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
   );
 }
